@@ -1,0 +1,158 @@
+---
+import siteData from '../data/site-data.json';
+const { carrusel } = siteData;
+---
+
+<section class="relative h-screen overflow-hidden">
+  <!-- Carousel Container -->
+  <div id="hero-carousel" class="relative h-full">
+    {carrusel.map((slide, index) => (
+      <div 
+        class={`carousel-slide absolute inset-0 transition-opacity duration-1000 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
+        data-index={index}
+      >
+        <!-- Background Image -->
+        <div 
+          class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={`background-image: url('${slide.imagen}');`}
+        >
+          <div class="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark/80"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative h-full flex items-center justify-center text-center px-4">
+          <div class="max-w-4xl">
+            {slide.titulo && (
+              <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-4 animate-slide-up">
+                {slide.titulo}
+              </h1>
+            )}
+            {slide.descripcion && (
+              <p class="text-xl md:text-2xl lg:text-3xl text-white/90 font-light animate-slide-up" style="animation-delay: 0.3s">
+                {slide.descripcion}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+  
+  <!-- Navigation Arrows -->
+  <button 
+    id="prev-btn"
+    class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-primary/80 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group z-10"
+    aria-label="Anterior"
+  >
+    <i class="fas fa-chevron-left text-white group-hover:scale-110 transition-transform"></i>
+  </button>
+  
+  <button 
+    id="next-btn"
+    class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-primary/80 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group z-10"
+    aria-label="Siguiente"
+  >
+    <i class="fas fa-chevron-right text-white group-hover:scale-110 transition-transform"></i>
+  </button>
+  
+  <!-- Dots Indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
+    {carrusel.map((_, index) => (
+      <button 
+        class={`carousel-dot w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? 'bg-primary w-8' : 'bg-white/50 hover:bg-white/80'}`}
+        data-index={index}
+        aria-label={`Ir a slide ${index + 1}`}
+      ></button>
+    ))}
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+    <a href="#nosotros" class="text-white/60 hover:text-primary transition-colors">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+  </div>
+</section>
+
+<script>
+  let currentSlide = 0;
+  let autoplayInterval: ReturnType<typeof setInterval>;
+  
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  
+  const totalSlides = slides.length;
+  
+  function showSlide(index: number) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.remove('opacity-0');
+        slide.classList.add('opacity-100');
+      } else {
+        slide.classList.remove('opacity-100');
+        slide.classList.add('opacity-0');
+      }
+    });
+    
+    dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.classList.add('bg-primary', 'w-8');
+        dot.classList.remove('bg-white/50');
+      } else {
+        dot.classList.remove('bg-primary', 'w-8');
+        dot.classList.add('bg-white/50');
+      }
+    });
+    
+    currentSlide = index;
+  }
+  
+  function nextSlide() {
+    const next = (currentSlide + 1) % totalSlides;
+    showSlide(next);
+  }
+  
+  function prevSlide() {
+    const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(prev);
+  }
+  
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 5000);
+  }
+  
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+  
+  // Event listeners
+  prevBtn?.addEventListener('click', () => {
+    prevSlide();
+    stopAutoplay();
+    startAutoplay();
+  });
+  
+  nextBtn?.addEventListener('click', () => {
+    nextSlide();
+    stopAutoplay();
+    startAutoplay();
+  });
+  
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+      stopAutoplay();
+      startAutoplay();
+    });
+  });
+  
+  // Pause on hover
+  const carousel = document.getElementById('hero-carousel');
+  carousel?.addEventListener('mouseenter', stopAutoplay);
+  carousel?.addEventListener('mouseleave', startAutoplay);
+  
+  // Start autoplay
+  startAutoplay();
+</script>

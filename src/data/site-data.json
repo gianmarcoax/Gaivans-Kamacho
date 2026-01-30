@@ -1,0 +1,74 @@
+{
+    "empresa": {
+        "nombre": "Rent a Car Vilcas Hmns Gaitán",
+        "logo": "/images/logo.png"
+    },
+    "carrusel": [
+        {
+            "id": 1,
+            "titulo": "Camiones Enormes",
+            "descripcion": "Los mejores",
+            "imagen": "/images/hero1.jpg"
+        },
+        {
+            "id": 2,
+            "titulo": "Autos de Lujo",
+            "descripcion": "Máximo confort",
+            "imagen": "/images/hero2.jpg"
+        },
+        {
+            "id": 3,
+            "titulo": "SUVs Familiares",
+            "descripcion": "Espacio y seguridad",
+            "imagen": "/images/hero3.jpg"
+        }
+    ],
+    "nosotros": {
+        "descripcion": "Bienvenidos a Rent a Car Vilcas. Somos una empresa dedicada a ofrecer un servicio personalizado y de calidad en el alquiler de vehículos. Con años de experiencia en el mercado, nos comprometemos a proporcionar soluciones de transporte confiables y accesibles para satisfacer todas tus necesidades de movilidad.\n\nNuestro equipo está formado por profesionales apasionados por brindar la mejor experiencia a nuestros clientes. Ya sea que necesites un vehículo para un viaje de negocios, unas vacaciones familiares o cualquier otra ocasión, estamos aquí para ayudarte.",
+        "imagen": "/images/about.jpg"
+    },
+    "vehiculos": [
+        {
+            "id": 1,
+            "nombre": "Toyota Fortuner",
+            "descripcion": "SUV espaciosa y potente, ideal para aventuras familiares y viajes largos. Equipada con todas las comodidades.",
+            "imagen": "/images/fortuner.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "Toyota Yaris",
+            "descripcion": "Compacto, económico y perfecto para la ciudad. Excelente rendimiento de combustible.",
+            "imagen": "/images/yaris.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "Toyota Hilux",
+            "descripcion": "Pickup resistente y versátil. Perfecta para trabajo y aventura en cualquier terreno.",
+            "imagen": "/images/hilux.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "RAM 1500",
+            "descripcion": "Potencia y elegancia combinadas. La pickup premium para quienes exigen lo mejor.",
+            "imagen": "/images/ram.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "Hyundai Tucson",
+            "descripcion": "SUV moderna con diseño vanguardista y tecnología de punta para el conductor exigente.",
+            "imagen": "/images/tucson.jpg"
+        },
+        {
+            "id": 6,
+            "nombre": "Kia Sportage",
+            "descripcion": "Elegante y eficiente. La combinación perfecta de estilo y practicidad.",
+            "imagen": "/images/sportage.jpg"
+        }
+    ],
+    "contacto": {
+        "telefono": "+51 999 999 999",
+        "email": "contacto@rentacarvilcas.com",
+        "direccion": "Av. Principal 123, Lima, Perú"
+    },
+    "whatsapp": "https://wa.me/51999999999?text=Hola,%20me%20interesa%20alquilar%20un%20vehículo"
+}

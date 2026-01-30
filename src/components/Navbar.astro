@@ -1,0 +1,91 @@
+---
+import siteData from '../data/site-data.json';
+const { empresa } = siteData;
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2">
+        <img src={empresa.logo} alt={empresa.nombre} class="h-12 w-auto" onerror="this.style.display='none'" />
+        <span class="text-xl font-bold text-white">
+          <span class="text-primary">RAC</span> - Rent a Cars
+        </span>
+      </a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#nosotros" class="text-white hover:text-primary transition-colors duration-300 font-medium">
+          Nosotros
+        </a>
+        <a href="#flota" class="text-white hover:text-primary transition-colors duration-300 font-medium">
+          Flota
+        </a>
+        <a href="#contacto" class="text-white hover:text-primary transition-colors duration-300 font-medium">
+          Contacto
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col space-y-4">
+        <a href="#nosotros" class="text-white hover:text-primary transition-colors duration-300 font-medium">
+          Nosotros
+        </a>
+        <a href="#flota" class="text-white hover:text-primary transition-colors duration-300 font-medium">
+          Flota
+        </a>
+        <a href="#contacto" class="text-white hover:text-primary transition-colors duration-300 font-medium">
+          Contacto
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar?.classList.add('bg-dark/95', 'backdrop-blur-md', 'shadow-lg');
+      navbar?.classList.remove('bg-transparent');
+    } else {
+      navbar?.classList.remove('bg-dark/95', 'backdrop-blur-md', 'shadow-lg');
+      navbar?.classList.add('bg-transparent');
+    }
+  });
+  
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    const icon = mobileMenuBtn.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    }
+  });
+  
+  // Close mobile menu when clicking a link
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      const icon = mobileMenuBtn?.querySelector('i');
+      if (icon) {
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      }
+    });
+  });
+</script>

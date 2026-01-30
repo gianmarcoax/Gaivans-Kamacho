@@ -1,0 +1,22 @@
+﻿
+> rentacar-astro@0.0.1 build
+> astro build
+
+[2m13:45:30[22m [34m[content][39m Syncing content
+[2m13:45:30[22m [34m[content][39m Synced content
+[2m13:45:30[22m [34m[types][39m Generated [2m63ms[22m
+[2m13:45:30[22m [34m[build][39m output: [34m"static"[39m
+[2m13:45:30[22m [34m[build][39m mode: [34m"static"[39m
+[2m13:45:30[22m [34m[build][39m directory: [34mD:\Kamacho Car\bicicly\rentacar-astro\dist\[39m
+[2m13:45:30[22m [34m[build][39m Collecting build info...
+[2m13:45:30[22m [34m[build][39m [32mÔ£ô Completed in 88ms.[39m
+[2m13:45:30[22m [34m[build][39m Building static entrypoints...
+[31m[1m13:45:31[22m [ERROR] [vite][39m [31mÔ£ù[39m Build failed in 952ms
+[@tailwindcss/vite:generate:build] Cannot apply unknown utility class `bg-gray-900`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+file: D:/Kamacho Car/bicicly/rentacar-astro/src/styles/global.css
+  [1mStack trace:[22m
+[2m    at onInvalidCandidate (file:///D:/Kamacho%20Car/bicicly/rentacar-astro/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:21:1314)
+    at file:///D:/Kamacho%20Car/bicicly/rentacar-astro/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:21:355
+    at I (file:///D:/Kamacho%20Car/bicicly/rentacar-astro/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:3:1377)
+    at Wi (file:///D:/Kamacho%20Car/bicicly/rentacar-astro/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:38:294)
+    at async rf (file:///D:/Kamacho%20Car/bicicly/rentacar-astro/node_modules/tailwindcss/dist/chunk-CT46QCH7.mjs:38:1406)[22m
