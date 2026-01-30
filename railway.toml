@@ -1,0 +1,9 @@
+# Railway configuration for Astro static site
+[build]
+builder = "nixpacks"
+
+[build.nixpacks]
+providers = ["node"]
+
+[deploy]
+startCommand = "npx serve dist -l $PORT"
