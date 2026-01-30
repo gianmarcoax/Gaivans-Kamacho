@@ -1,13 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Importar Tailwind CSS v4 */
+@import "tailwindcss";
 
 /* Fuente Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Variables de tema - COLORES CORPORATIVOS GAIVANS KAMACHO */
+@theme {
+  /* Naranja Vibrante (Letra K) */
+  --color-primary: #F07F22;
+  --color-primary-light: #f59642;
+  --color-primary-dark: #d86e1a;
+
+  /* Azul Petróleo Oscuro (Letra G) */
+  --color-dark: #0B2C33;
+  --color-dark-light: #0f3d47;
+  --color-dark-lighter: #14505c;
+
+  /* Colores adicionales */
+  --color-accent-orange: #F07F22;
+  --color-accent-green: #25d366;
+
+  --font-family-poppins: 'Poppins', sans-serif;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #111827;
+  background-color: #0B2C33;
   color: #ffffff;
 }
 
@@ -93,11 +111,12 @@ body {
   animation: fadeIn 0.6s ease-out forwards;
 }
 
-/* Reveal on scroll classes */
+/* Reveal on scroll classes - OPTIMIZADO */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .reveal.active {
@@ -108,7 +127,8 @@ body {
 .reveal-left {
   opacity: 0;
   transform: translateX(-50px);
-  transition: all 0.8s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .reveal-left.active {
@@ -119,7 +139,8 @@ body {
 .reveal-right {
   opacity: 0;
   transform: translateX(50px);
-  transition: all 0.8s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .reveal-right.active {
@@ -132,20 +153,20 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Scrollbar personalizado */
+/* Scrollbar personalizado - Colores corporativos */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0B2C33;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6b35;
+  background: #F07F22;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff8555;
+  background: #f59642;
 }

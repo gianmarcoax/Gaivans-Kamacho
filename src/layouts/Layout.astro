@@ -20,13 +20,14 @@ const { title, description = 'Alquiler de vehículos de calidad - Rent a Car Vil
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
-    <!-- Fonts -->
+    <!-- Fonts - Carga optimizada -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Font Awesome - Carga diferida -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
     
     <title>{title}</title>
   </head>
@@ -34,22 +35,27 @@ const { title, description = 'Alquiler de vehículos de calidad - Rent a Car Vil
     <slot />
     
     <script>
-      // Reveal on scroll animation
-      function revealOnScroll() {
-        const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-        
-        elements.forEach(element => {
-          const elementTop = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-          
-          if (elementTop < windowHeight - 100) {
-            element.classList.add('active');
+      // Optimizado: IntersectionObserver en lugar de scroll listener
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -100px 0px',
+        threshold: 0.1
+      };
+      
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target); // Deja de observar una vez revelado
           }
         });
-      }
+      }, observerOptions);
       
-      window.addEventListener('scroll', revealOnScroll);
-      window.addEventListener('load', revealOnScroll);
+      // Observar todos los elementos con reveal
+      document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        elements.forEach(el => revealObserver.observe(el));
+      });
     </script>
   </body>
 </html>

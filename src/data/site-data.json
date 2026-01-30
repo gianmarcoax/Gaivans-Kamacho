@@ -1,74 +1,69 @@
 {
     "empresa": {
-        "nombre": "Rent a Car Vilcas Hmns Gaitán",
-        "logo": "/images/logo.png"
+        "nombre": "GAIVANS KAMACHO EIRL",
+        "logo": "/images/logo.png",
+        "eslogan": "Alquiler de Vehículos de Calidad"
     },
     "carrusel": [
         {
             "id": 1,
-            "titulo": "Camiones Enormes",
-            "descripcion": "Los mejores",
-            "imagen": "/images/hero1.jpg"
+            "titulo": "GAIVANS KAMACHO",
+            "descripcion": "Tu mejor opción en alquiler de vehículos en Juliaca",
+            "imagen": "/images/carrusel/c1.jpg"
         },
         {
             "id": 2,
-            "titulo": "Autos de Lujo",
-            "descripcion": "Máximo confort",
-            "imagen": "/images/hero2.jpg"
+            "titulo": "Vehículos de Calidad",
+            "descripcion": "Flota moderna y confiable para tus viajes",
+            "imagen": "/images/carrusel/c2.jpg"
         },
         {
             "id": 3,
-            "titulo": "SUVs Familiares",
-            "descripcion": "Espacio y seguridad",
-            "imagen": "/images/hero3.jpg"
+            "titulo": "Servicio Premium",
+            "descripcion": "Atención personalizada las 24 horas",
+            "imagen": "/images/carrusel/c3.jpg"
         }
     ],
     "nosotros": {
-        "descripcion": "Bienvenidos a Rent a Car Vilcas. Somos una empresa dedicada a ofrecer un servicio personalizado y de calidad en el alquiler de vehículos. Con años de experiencia en el mercado, nos comprometemos a proporcionar soluciones de transporte confiables y accesibles para satisfacer todas tus necesidades de movilidad.\n\nNuestro equipo está formado por profesionales apasionados por brindar la mejor experiencia a nuestros clientes. Ya sea que necesites un vehículo para un viaje de negocios, unas vacaciones familiares o cualquier otra ocasión, estamos aquí para ayudarte.",
-        "imagen": "/images/about.jpg"
+        "descripcion": "Somos GAIVANS KAMACHO EIRL, una empresa dedicada al alquiler de vehículos en Juliaca, Puno. Con años de experiencia en el rubro, nos hemos consolidado como la opción preferida para quienes buscan calidad, seguridad y confianza en el alquiler de autos.\n\nNuestra flota cuenta con vehículos modernos y en excelente estado, ideales para viajes familiares, turismo o negocios. Nos comprometemos a brindarte el mejor servicio con atención personalizada y precios competitivos.",
+        "imagen": "/images/nosotros/about.jpg"
     },
     "vehiculos": [
         {
             "id": 1,
             "nombre": "Toyota Fortuner",
             "descripcion": "SUV espaciosa y potente, ideal para aventuras familiares y viajes largos. Equipada con todas las comodidades.",
-            "imagen": "/images/fortuner.jpg"
+            "imagen": "/images/vehiculos/car1.jpg"
         },
         {
             "id": 2,
             "nombre": "Toyota Yaris",
             "descripcion": "Compacto, económico y perfecto para la ciudad. Excelente rendimiento de combustible.",
-            "imagen": "/images/yaris.jpg"
+            "imagen": "/images/vehiculos/car2.jpg"
         },
         {
             "id": 3,
             "nombre": "Toyota Hilux",
             "descripcion": "Pickup resistente y versátil. Perfecta para trabajo y aventura en cualquier terreno.",
-            "imagen": "/images/hilux.jpg"
+            "imagen": "/images/vehiculos/car3.jpg"
         },
         {
             "id": 4,
-            "nombre": "RAM 1500",
-            "descripcion": "Potencia y elegancia combinadas. La pickup premium para quienes exigen lo mejor.",
-            "imagen": "/images/ram.jpg"
+            "nombre": "Hyundai Tucson",
+            "descripcion": "SUV moderna con diseño vanguardista y tecnología de punta para el conductor exigente.",
+            "imagen": "/images/vehiculos/1-8.png"
         },
         {
             "id": 5,
-            "nombre": "Hyundai Tucson",
-            "descripcion": "SUV moderna con diseño vanguardista y tecnología de punta para el conductor exigente.",
-            "imagen": "/images/tucson.jpg"
-        },
-        {
-            "id": 6,
-            "nombre": "Kia Sportage",
+            "nombre": "Honda CR-V",
             "descripcion": "Elegante y eficiente. La combinación perfecta de estilo y practicidad.",
-            "imagen": "/images/sportage.jpg"
+            "imagen": "/images/vehiculos/CM20180802-36226-54622.jpeg"
         }
     ],
     "contacto": {
-        "telefono": "+51 999 999 999",
-        "email": "contacto@rentacarvilcas.com",
-        "direccion": "Av. Principal 123, Lima, Perú"
+        "telefono": "+51 995010281",
+        "email": "contacto@gaivanskamacho.com",
+        "direccion": "Juliaca - Puno, Perú"
     },
-    "whatsapp": "https://wa.me/51999999999?text=Hola,%20me%20interesa%20alquilar%20un%20vehículo"
+    "whatsapp": "https://wa.me/51995010281?text=Hola,%20me%20interesa%20alquilar%20un%20vehículo"
 }
