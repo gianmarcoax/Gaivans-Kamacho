@@ -1,4 +1,4 @@
-# Nixpacks build configuration
+# Nixpacks build configuration for Astro SSR
 [phases.setup]
 nixPkgs = ["nodejs_20"]
 
@@ -9,4 +9,4 @@ cmds = ["npm ci"]
 cmds = ["npm run build"]
 
 [start]
-cmd = "npx serve dist -p $PORT"
+cmd = "npm run start"

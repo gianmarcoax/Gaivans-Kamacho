@@ -1,6 +1,6 @@
-# Railway configuration for Astro static site
+# Railway configuration for Astro SSR
 [build]
 builder = "nixpacks"
 
 [deploy]
-startCommand = "npx serve dist -p $PORT"
+startCommand = "npm run start"
