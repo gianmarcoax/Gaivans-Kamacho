@@ -7,63 +7,60 @@
     "carrusel": [
         {
             "id": 1,
-            "titulo": "GAIVANS KAMACHO",
-            "descripcion": "Tu mejor opción en alquiler de vehículos en Juliaca",
-            "imagen": "/images/carrusel/c1.jpg"
+            "titulo": "Alquiler de Camionetas 4x4 en Juliaca",
+            "descripcion": "Servicio confiable de alquiler de camionetas Toyota Hilux para minería, construcción civil y paseos turísticos. ¡Contáctanos hoy mismo!",
+            "imagen": "/images/carrusel/slide1.jpg"
         },
         {
             "id": 2,
-            "titulo": "Vehículos de Calidad",
-            "descripcion": "Flota moderna y confiable para tus viajes",
-            "imagen": "/images/carrusel/c2.jpg"
+            "titulo": "Toyota Hilux: Potencia y Confianza",
+            "descripcion": "Ideal para trabajos pesados en minería y construcción. Alquila nuestras camionetas 4x4 y vive la experiencia Toyota",
+            "imagen": "/images/carrusel/slide2.jpg"
         },
         {
             "id": 3,
-            "titulo": "Servicio Premium",
-            "descripcion": "Atención personalizada las 24 horas",
-            "imagen": "/images/carrusel/c3.jpg"
+            "titulo": "Paseos Turísticos",
+            "descripcion": "Explora los mejores destinos de la región con nuestras camionetas 4x4. Seguridad y comodidad garantizadas.",
+            "imagen": "/images/carrusel/slide3.jpg"
+        },
+        {
+            "id": 4,
+            "titulo": "Empresa Confiable en Alquiler de Vehículos",
+            "descripcion": "Con varios años de experiencia en el mercado. Alquila con nosotros y disfruta de un servicio de calidad.",
+            "imagen": "/images/carrusel/slide4.jpg"
         }
     ],
     "nosotros": {
-        "descripcion": "Somos GAIVANS KAMACHO EIRL, una empresa dedicada al alquiler de vehículos en Juliaca, Puno. Con años de experiencia en el rubro, nos hemos consolidado como la opción preferida para quienes buscan calidad, seguridad y confianza en el alquiler de autos.\n\nNuestra flota cuenta con vehículos modernos y en excelente estado, ideales para viajes familiares, turismo o negocios. Nos comprometemos a brindarte el mejor servicio con atención personalizada y precios competitivos.",
+        "descripcion": "En GAIVANS KAMACHO, nos especializamos en el alquiler de camionetas 4x4 y vehículos para minería, construcción civil y paseos turísticos. Con más de 10 años de experiencia en el mercado, nos hemos consolidado como una empresa confiable y comprometida con la satisfacción de nuestros clientes.\n\nNuestra flota incluye modelos Toyota Hilux y Toyota Fortuner, ideales para terrenos difíciles y trabajos pesados. Ofrecemos un servicio personalizado, garantizando la seguridad y comodidad en cada viaje.\n\nConfía en nosotros para tus proyectos de minería, construcción o paseos turísticos. ¡Estamos aquí para ayudarte!",
         "imagen": "/images/nosotros/about.jpg"
     },
     "vehiculos": [
         {
             "id": 1,
-            "nombre": "Toyota Fortuner",
-            "descripcion": "SUV espaciosa y potente, ideal para aventuras familiares y viajes largos. Equipada con todas las comodidades.",
-            "imagen": "/images/vehiculos/car1.jpg"
+            "nombre": "Camionetas Hilux 4x4",
+            "descripcion": "Nuestras camionetas Toyota están diseñadas para ofrecer el máximo rendimiento en cualquier situación. Ya sea para minería, construcción o paseos turísticos, encontrarás en ellas la confiabilidad y durabilidad que necesitas.",
+            "imagen": "/images/vehiculos/hilux.jpg",
+            "whatsappMsg": "Hola, me interesa alquilar una Camioneta Hilux 4x4. ¿Podrían darme más información?"
         },
         {
             "id": 2,
-            "nombre": "Toyota Yaris",
-            "descripcion": "Compacto, económico y perfecto para la ciudad. Excelente rendimiento de combustible.",
-            "imagen": "/images/vehiculos/car2.jpg"
+            "nombre": "Autos Toyota",
+            "descripcion": "Toyota ofrece una amplia gama de vehículos que combinan innovación, seguridad y eficiencia. Desde sedanes cómodos y eficientes hasta SUVs y pickups robustas, cada modelo está diseñado para brindar un excelente rendimiento y durabilidad. Con tecnología avanzada y un compromiso con la calidad, Toyota es la elección ideal para cualquier tipo de conductor.",
+            "imagen": "/images/vehiculos/yaris.jpg",
+            "whatsappMsg": "Hola, me interesa alquilar un Auto Toyota. ¿Podrían darme más información?"
         },
         {
             "id": 3,
-            "nombre": "Toyota Hilux",
-            "descripcion": "Pickup resistente y versátil. Perfecta para trabajo y aventura en cualquier terreno.",
-            "imagen": "/images/vehiculos/car3.jpg"
-        },
-        {
-            "id": 4,
-            "nombre": "Hyundai Tucson",
-            "descripcion": "SUV moderna con diseño vanguardista y tecnología de punta para el conductor exigente.",
-            "imagen": "/images/vehiculos/1-8.png"
-        },
-        {
-            "id": 5,
-            "nombre": "Honda CR-V",
-            "descripcion": "Elegante y eficiente. La combinación perfecta de estilo y practicidad.",
-            "imagen": "/images/vehiculos/CM20180802-36226-54622.jpeg"
+            "nombre": "Toyota Fortuner 4x4",
+            "descripcion": "La Toyota Fortuner combina elegancia y potencia. Ideal para paseos turísticos y viajes familiares, ofrece comodidad y seguridad en cada recorrido. Su diseño robusto y tecnología avanzada la convierten en la mejor opción para explorar Juliaca y sus alrededores.",
+            "imagen": "/images/vehiculos/fortuner.jpg",
+            "whatsappMsg": "Hola, me interesa alquilar una Toyota Fortuner 4x4. ¿Podrían darme más información?"
         }
     ],
     "contacto": {
         "telefono": "+51 995010281",
-        "email": "contacto@gaivanskamacho.com",
+        "email": "hector.renvilca@gmail.com",
         "direccion": "Juliaca - Puno, Perú"
     },
-    "whatsapp": "https://wa.me/51995010281?text=Hola,%20me%20interesa%20alquilar%20un%20vehículo"
+    "whatsapp": "https://wa.me/51995010281"
 }
