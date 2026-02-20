@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://gaivans-kamacho-production.up.railway.app/sitemap.xml
+Sitemap: https://alquilercamionetaspuno.net.pe/sitemap.xml
