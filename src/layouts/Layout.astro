@@ -22,6 +22,13 @@ const { empresa, contacto } = siteData;
 const siteUrl = empresa.url;
 const fullImage = image.startsWith("http") ? image : `${siteUrl}${image}`;
 
+// Detectar si estamos en Railway para bloquear indexación
+const currentHost = Astro.url.hostname;
+const isRailway = currentHost.includes("railway.app");
+const robotsContent = isRailway
+  ? "noindex, nofollow"
+  : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
+
 // Schema.org JSON-LD - LocalBusiness / AutoRental
 const schemaLocalBusiness = {
   "@context": "https://schema.org",
@@ -123,10 +130,7 @@ const schemaWebsite = {
     <meta name="description" content={description} />
     <meta name="keywords" content={empresa.seo.keywords} />
     <meta name="author" content={empresa.nombre} />
-    <meta
-      name="robots"
-      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-    />
+    <meta name="robots" content={robotsContent} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonicalURL} />
 
